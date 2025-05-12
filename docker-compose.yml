@@ -1,0 +1,22 @@
+# version: "3.5"
+services:
+  db:
+    container_name: postgres_bot
+    image: postgres:17
+    environment:
+      POSTGRES_USER: botdb
+      POSTGRES_PASSWORD: PASSWORD@2024
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    networks:
+      - postgres
+    restart: unless-stopped
+
+networks:
+  postgres:
+    driver: bridge
+
+volumes:
+  postgres_data:
