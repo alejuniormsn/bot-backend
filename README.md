@@ -15,7 +15,7 @@ sudo curl -o /usr/share/postgresql-common/pgdg/apt.postgresql.org.asc --fail htt
 sudo sh -c 'echo "deb [signed-by=/usr/share/postgresql-common/pgdg/apt.postgresql.org.asc] https://apt.postgresql.org/pub/repos/apt noble-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
 sudo apt update
 sudo apt-get install postgresql-client -y
-PGPASSWORD="PASSWORD@2024" pg_dump -U botdb -h 192.168.0.27 -p 5432 botdb > /home/dev/Backup_db_bot/$(date +%Y%m%d-%H%M%S)-botdb.sql
+PGPASSWORD="PASSWORD" pg_dump -U botdb -h 192.168.0.27 -p 5432 botdb > /home/dev/Backup_db_bot/$(date +%Y%m%d-%H%M%S)-botdb.sql
 
 # - Aplicação servida pelo PM2:
 
