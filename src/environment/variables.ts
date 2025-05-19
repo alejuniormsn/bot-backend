@@ -1,9 +1,9 @@
 export const env = {
   PORT: "3003",
-  JWT_SECRET: "portal_adm_ett",
-  POSTGRESQL_USERNAME: "botdbett",
-  POSTGRESQL_PASSWORD: "Ett@2024",
-  POSTGRESQL_DATABASE: "botdbett",
+  JWT_SECRET: "SECRET",
+  POSTGRESQL_USERNAME: "botdb",
+  POSTGRESQL_PASSWORD: "PASSWORD",
+  POSTGRESQL_DATABASE: "botdb",
   DIALECT: "postgres",
   // Produção
   HOST: "192.168.0.27",
